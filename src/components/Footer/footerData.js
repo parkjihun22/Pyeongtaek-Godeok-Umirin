@@ -17,7 +17,7 @@ const footerData = {
   familySites: [
     {
       name: "평택 고덕 우미린",
-      url: "https://cheongju-hanyanglips.com/",
+      url: "https://pyeongtaekgodeok-umirin.co.kr/",
     },
   ],
 
