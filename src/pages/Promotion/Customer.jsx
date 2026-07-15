@@ -30,7 +30,7 @@ export default function Customer() {
 
     try {
       // Formspree 엔드포인트로 POST
-      const res = await fetch("https://formspree.io/f/mojoleaz", {
+      const res = await fetch("https://formspree.io/f/xrenelvj", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
