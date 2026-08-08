@@ -60,6 +60,8 @@ const getArticleSummary = (article) => article.summary || article.excerpt || "";
 const getArticlePath = (basePath, article) =>
   `${basePath}/${article.slug || article.id}`;
 
+const canonicalPressPath = "/Promotion/Press";
+
 const sortArticlesByDate = (items) =>
   [...items].sort((a, b) => {
     const aTime = toDate(a.date || a.publishedAt)?.getTime() || 0;
@@ -86,7 +88,7 @@ export default function Press() {
   const seoPage = useMemo(
     () => ({
       ...seoPages.press,
-      path: pressBasePath,
+      path: canonicalPressPath,
       pageType: "CollectionPage",
       description:
         "평택 고덕 우미린 언론보도 페이지입니다. 고덕국제신도시 Abc-36블록 공급 정보, 청약, 입지환경, 모델하우스 방문예약 관련 공식 보도자료와 분양 소식을 확인하세요.",
@@ -94,18 +96,18 @@ export default function Press() {
         {
           "@context": "https://schema.org",
           "@type": "ItemList",
-          "@id": `${getAbsoluteUrl(pressBasePath)}#press-list`,
+          "@id": `${getAbsoluteUrl(canonicalPressPath)}#press-list`,
           name: "평택 고덕 우미린 언론보도 목록",
           itemListElement: displayArticles.map((article, index) => ({
             "@type": "ListItem",
             position: index + 1,
-            url: getAbsoluteUrl(getArticlePath(pressBasePath, article)),
+            url: getAbsoluteUrl(getArticlePath(canonicalPressPath, article)),
             name: article.title,
           })),
         },
       ],
     }),
-    [displayArticles, pressBasePath]
+    [displayArticles]
   );
 
   useEffect(() => {
@@ -198,7 +200,11 @@ export default function Press() {
               모델하우스 방문예약까지 평택 고덕 우미린의 공식 보도자료와
               분양 소식을 전합니다.
             </p>
-            <Link className={styles.pressAdminShortcut} to={pressAdminPath}>
+            <Link
+              className={styles.pressAdminShortcut}
+              to={pressAdminPath}
+              rel="nofollow"
+            >
               관리자 페이지
             </Link>
           </div>

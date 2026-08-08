@@ -16,8 +16,24 @@ const footerData = {
 
   familySites: [
     {
-      name: "평택 고덕 우미린",
-      url: "https://pyeongtaekgodeok-umirin.co.kr/",
+      name: "고덕신도시 아테라",
+      url: "https://www.godeok-athera.co.kr/",
+    },
+    {
+      name: "엘리프 고덕 센트럴하이",
+      url: "https://www.elifgodeok-central.co.kr/",
+    },
+    {
+      name: "평택 고덕 수자인풍경채",
+      url: "https://xn--289apct1w55qukgde446a3qjlygg4b.kr/",
+    },
+    {
+      name: "힐스테이트 고덕엘리스트",
+      url: "https://hillstategodeok-elisth.co.kr/",
+    },
+    {
+      name: "고덕 수자인풍경채",
+      url: "https://godeok-sujainhouse.co.kr/",
     },
   ],
 

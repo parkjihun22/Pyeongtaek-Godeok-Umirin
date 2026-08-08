@@ -321,6 +321,17 @@ export const seoPages = {
     changefreq: "daily",
   }),
 
+  pressAdmin: page({
+    path: "/Promotion/Press/Admin",
+    title: "언론보도 관리 | 평택 고덕 우미린",
+    description:
+      "평택 고덕 우미린 언론보도 관리자 페이지입니다. 이 페이지는 검색 결과에 노출하지 않습니다.",
+    menu: "관리자",
+    priority: 0,
+    changefreq: "yearly",
+    robots: "noindex, nofollow",
+  }),
+
   notFound: page({
     path: "/404",
     title: "페이지를 찾을 수 없습니다 | 평택 고덕 우미린",
@@ -360,7 +371,7 @@ export const seoPathMap = Object.fromEntries(
 );
 
 export const seoPageList = Object.values(seoPages).filter(
-  (item) => item.robots !== "noindex, follow"
+  (item) => !item.robots?.includes("noindex")
 );
 
 export const getAbsoluteUrl = (path = "/") => {
@@ -376,6 +387,13 @@ export const getSeoPageByPath = (pathname = "/") => {
   const exactKey = seoPathMap[normalizedPath];
 
   if (exactKey) return seoPages[exactKey];
+
+  if (
+    normalizedPath === "/promotion/presswrite" ||
+    normalizedPath.endsWith("/press/admin")
+  ) {
+    return seoPages.pressAdmin;
+  }
 
   if (normalizedPath.endsWith("/press")) return seoPages.press;
   if (normalizedPath.includes("/promotion/press")) return seoPages.press;

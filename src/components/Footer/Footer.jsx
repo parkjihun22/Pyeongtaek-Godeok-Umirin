@@ -24,7 +24,7 @@ const Footer = ({ data = footerData }) => {
     <ul id="footer-family-site-list" className={styles.familyList}>
       {data.familySites.map((site) => (
         <li key={site.name}>
-          <a href={site.url} target="_blank" rel="noopener noreferrer">
+          <a href={site.url} target="_blank" rel="nofollow noopener noreferrer">
             {site.name}
           </a>
         </li>
@@ -80,7 +80,7 @@ const Footer = ({ data = footerData }) => {
                 aria-expanded={isFamilyOpen}
                 aria-controls="footer-family-site-list"
               >
-                FAMILY SITE
+                관련 현장
                 {isFamilyOpen ? <FaChevronUp /> : <FaChevronDown />}
               </button>
               {isFamilyOpen && familySiteList}
@@ -95,7 +95,7 @@ const Footer = ({ data = footerData }) => {
 
       <noscript>
         <div className={styles.familySiteNoscript}>
-          <h3>FAMILY SITE</h3>
+          <h3>관련 현장</h3>
           {familySiteList}
         </div>
       </noscript>

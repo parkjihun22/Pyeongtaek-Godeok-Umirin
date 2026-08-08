@@ -147,7 +147,7 @@ export default function PressDetail() {
   const seoPage = useMemo(() => {
     if (!article) return null;
 
-    const detailPath = `${pressBasePath}/${article.slug || id}`;
+    const detailPath = `/Promotion/Press/${article.slug || id}`;
     const publishedAt = article.publishedAt || toIsoString(article.date);
     const image = article.seoImage || article.image || siteSeo.ogImage;
     const imageUrl = getAbsoluteUrl(image);
@@ -194,7 +194,7 @@ export default function PressDetail() {
         },
       ],
     };
-  }, [article, id, pressBasePath]);
+  }, [article, id]);
 
   if (!article) return null;
 
