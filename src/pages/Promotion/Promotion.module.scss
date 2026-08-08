@@ -495,6 +495,11 @@
 
 /* '언론보도' 같은 분류 배지입니다. 글자 크기, 패딩, 줄바꿈 여부를 조절합니다. */
 .pressCardFooter span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 44px;
   padding: 0.28rem 1rem;
   border: 1px solid rgba(184, 137, 63, 0.36);
   border-radius: 6px;
@@ -1095,9 +1100,14 @@
   .pressCardFooter {
     grid-column: 1;
     grid-row: auto;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
     gap: 0.75rem;
+  }
+
+  /* 모바일 목록 카드의 '언론보도' 배지 높이입니다. VIEW 버튼 높이와 맞춥니다. */
+  .pressCardFooter span {
+    min-height: 36px;
   }
 
   /* 모바일에서 상세 페이지 제목 영역의 위아래 여백을 조절합니다. */
