@@ -7,13 +7,13 @@ import { getStorage }  from "firebase/storage";
 // import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyACc2I8N05qo8U1Pm9kzLNSBvRIMBdeXLc",
-    authDomain: "jihun-3a99d.firebaseapp.com",
-    projectId: "jihun-3a99d",
-    storageBucket: "jihun-3a99d.firebasestorage.app",
-    messagingSenderId: "45822960520",
-    appId: "1:45822960520:web:7964a176760be653ff103d",
-    measurementId: "G-FWW1ZGNH1Z"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY || "AIzaSyACc2I8N05qo8U1Pm9kzLNSBvRIMBdeXLc",
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN || "jihun-3a99d.firebaseapp.com",
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID || "jihun-3a99d",
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET || "jihun-3a99d.firebasestorage.app",
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID || "45822960520",
+    appId: process.env.REACT_APP_FIREBASE_APP_ID || "1:45822960520:web:7964a176760be653ff103d",
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID || "G-FWW1ZGNH1Z"
 };
 
 const app = initializeApp(firebaseConfig);

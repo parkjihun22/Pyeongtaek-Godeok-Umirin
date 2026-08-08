@@ -1,4 +1,4 @@
-const SITE_URL = "https://cheongju-hanyanglips.com";
+const SITE_URL = "https://pyeongtaekgodeok-umirin.co.kr";
 
 export const siteSeo = {
   siteName: "평택 고덕 우미린",
@@ -9,6 +9,8 @@ export const siteSeo = {
   organizationId: `${SITE_URL}/#organization`,
   websiteId: `${SITE_URL}/#website`,
 
+  defaultTitle: "평택 고덕 우미린",
+
   defaultDescription:
     "평택 고덕 우미린 공식 홈페이지입니다. 경기도 평택시 고덕 국제화계획지구 내 Abc-36블록에 조성되는 평택 고덕 우미린 프레스티지 총 743세대, 전용 84㎡·94㎡·101㎡·111㎡ 타입, 청약정보, 분양가 상담, 견본주택과 모델하우스 방문예약 정보를 확인하세요.",
 
@@ -17,7 +19,14 @@ export const siteSeo = {
     addressRegion: "경기도",
     addressLocality: "평택시",
     streetAddress: "고덕 국제화계획지구 내 Abc-36블록",
+    block: "Abc-36블록",
+    households: "743세대",
+    scale: "총 743세대",
+    unitTypes: ["84㎡", "94㎡", "101㎡", "111㎡"],
+    brand: "우미린",
     brands: ["평택 고덕 우미린", "평택 고덕 우미린 프레스티지", "우미건설"],
+    developer: "우미건설",
+    contractor: "우미건설",
     navigationSchemaName: "평택 고덕 우미린 주요 메뉴",
   },
 
@@ -36,6 +45,9 @@ export const siteSeo = {
     "평택 고덕 우미린 공급정보",
     "평택 고덕 우미린 청약",
     "평택 고덕 우미린 분양가",
+    "평택 고덕 우미린 언론보도",
+    "평택 고덕 우미린 보도자료",
+    "평택 고덕 우미린 뉴스",
     "평택 고덕 우미린 743세대",
     "평택 고덕 우미린 84㎡",
     "평택 고덕 우미린 94㎡",
@@ -102,8 +114,11 @@ export const seoNavigation = [
   },
   {
     name: "홍보센터",
-    path: "/Promotion/Customer",
-    children: [{ name: "관심고객등록", path: "/Promotion/Customer" }],
+    path: "/Promotion/Press",
+    children: [
+      { name: "언론보도", path: "/Promotion/Press" },
+      { name: "관심고객등록", path: "/Promotion/Customer" },
+    ],
   },
 ];
 
@@ -295,6 +310,17 @@ export const seoPages = {
     changefreq: "daily",
   }),
 
+  press: page({
+    path: "/Promotion/Press",
+    title: "언론보도 | 평택 고덕 우미린",
+    description:
+      "평택 고덕 우미린 언론보도 페이지입니다. 고덕국제신도시 Abc-36블록 공급 정보, 청약, 입지환경, 모델하우스 방문예약 관련 공식 보도자료와 분양 소식을 확인하세요.",
+    menu: "홍보센터",
+    image: "/img/og/main.jpg",
+    priority: 0.9,
+    changefreq: "daily",
+  }),
+
   notFound: page({
     path: "/404",
     title: "페이지를 찾을 수 없습니다 | 평택 고덕 우미린",
@@ -307,23 +333,54 @@ export const seoPages = {
   }),
 };
 
+const normalizeSeoPath = (pathname = "/") => {
+  let cleanPath = pathname || "/";
+
+  try {
+    if (/^https?:\/\//.test(cleanPath)) {
+      cleanPath = new URL(cleanPath).pathname;
+    }
+  } catch {
+    cleanPath = "/";
+  }
+
+  cleanPath = decodeURI(cleanPath)
+    .split("?")[0]
+    .split("#")[0]
+    .replace(/\/$/, "");
+
+  return cleanPath.toLowerCase() || "/";
+};
+
 export const seoPathMap = Object.fromEntries(
-  Object.entries(seoPages).map(([key, value]) => [value.path.toLowerCase(), key])
+  Object.entries(seoPages).map(([key, value]) => [
+    normalizeSeoPath(value.path),
+    key,
+  ])
+);
+
+export const seoPageList = Object.values(seoPages).filter(
+  (item) => item.robots !== "noindex, follow"
 );
 
 export const getAbsoluteUrl = (path = "/") => {
   if (/^https?:\/\//.test(path)) return path;
-  return `${siteSeo.siteUrl}${path}`;
+
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+
+  return `${siteSeo.siteUrl}${normalizedPath}`;
 };
 
 export const getSeoPageByPath = (pathname = "/") => {
-  const decodedPath = decodeURI(pathname).replace(/\/$/, "") || "/";
-  const normalizedPath = decodedPath.toLowerCase();
+  const normalizedPath = normalizeSeoPath(pathname);
   const exactKey = seoPathMap[normalizedPath];
 
   if (exactKey) return seoPages[exactKey];
 
+  if (normalizedPath.endsWith("/press")) return seoPages.press;
+  if (normalizedPath.includes("/promotion/press")) return seoPages.press;
   if (normalizedPath.endsWith("/customer")) return seoPages.customer;
+  if (normalizedPath.includes("/promotion/customer")) return seoPages.customer;
 
   return seoPages.notFound;
 };
