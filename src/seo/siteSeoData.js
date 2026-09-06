@@ -1,7 +1,7 @@
 const SITE_URL = "https://pyeongtaekgodeok-umirin.co.kr";
 
 export const siteSeo = {
-  siteName: "평택 고덕 우미린",
+  siteName: "평택 고덕 우미린 2차",
   siteUrl: SITE_URL,
   phone: "1533-8848",
   ogImage: "/img/og/main.jpg",
@@ -9,17 +9,17 @@ export const siteSeo = {
   organizationId: `${SITE_URL}/#organization`,
   websiteId: `${SITE_URL}/#website`,
 
-  defaultTitle: "평택 고덕 우미린",
+  defaultTitle: "평택 고덕 우미린 2차",
 
   defaultDescription:
-    "평택 고덕 우미린 공식 홈페이지입니다. 경기도 평택시 고덕 국제화계획지구 내 Abc-36블록에 조성되는 평택 고덕 우미린 프레스티지 총 743세대, 전용 84㎡·94㎡·101㎡·111㎡ 타입, 청약정보, 분양가 상담, 견본주택과 모델하우스 방문예약 정보를 확인하세요.",
+    "평택 고덕 우미린 공식 홈페이지입니다. 경기도 평택시 고덕 국제화계획지구 내 Abc-33블록에 조성되는 평택 고덕 우미린 프레스티지 2차 전용 84㎡·94㎡·101㎡·111㎡ 타입, 청약정보, 분양가 상담, 견본주택과 모델하우스 방문예약 정보를 확인하세요.",
 
   project: {
     addressCountry: "KR",
     addressRegion: "경기도",
     addressLocality: "평택시",
-    streetAddress: "고덕 국제화계획지구 내 Abc-36블록",
-    block: "Abc-36블록",
+    streetAddress: "고덕 국제화계획지구 내 Abc-33블록",
+    block: "Abc-33블록",
     households: "743세대",
     scale: "총 743세대",
     unitTypes: ["84㎡", "94㎡", "101㎡", "111㎡"],
@@ -31,30 +31,10 @@ export const siteSeo = {
   },
 
   keywords: [
-    "평택 고덕 우미린",
+    "평택 고덕 우미린 2차",
     "평택 고덕 우미린 프레스티지",
-    "평택 고덕 아파트",
-    "고덕국제신도시",
-    "고덕 국제화계획지구",
-    "평택 고덕 국제화계획지구 Abc-36블록",
-    "평택 신축아파트",
-    "평택 아파트 분양",
-    "평택 고덕 분양",
-    "평택 고덕 우미린 모델하우스",
-    "평택 고덕 우미린 견본주택",
-    "평택 고덕 우미린 공급정보",
-    "평택 고덕 우미린 청약",
-    "평택 고덕 우미린 분양가",
-    "평택 고덕 우미린 언론보도",
-    "평택 고덕 우미린 보도자료",
-    "평택 고덕 우미린 뉴스",
-    "평택 고덕 우미린 743세대",
-    "평택 고덕 우미린 84㎡",
-    "평택 고덕 우미린 94㎡",
-    "평택 고덕 우미린 101㎡",
-    "평택 고덕 우미린 111㎡",
-    "84A 84B 84D 94A 94B 94D 101 111 타입",
-    "모델하우스 방문예약",
+    "평택 고덕 Abc-33블록",
+
   ],
 };
 
@@ -145,7 +125,7 @@ const page = ({
 export const seoPages = {
   home: page({
     path: "/",
-    title: "평택 고덕 우미린",
+    title: "평택 고덕 우미린 2차",
     description: siteSeo.defaultDescription,
     menu: "홈",
     priority: 1,
@@ -172,7 +152,7 @@ export const seoPages = {
     path: "/BusinessGuide/intro",
     title: "사업안내 | 평택 고덕 우미린",
     description:
-      "평택 고덕 우미린 사업안내 페이지입니다. 경기도 평택시 고덕 국제화계획지구 내 Abc-36블록, 총 743세대 규모의 평택 고덕 우미린 프레스티지 정보를 확인하세요.",
+      "평택 고덕 우미린 사업안내 페이지입니다. 경기도 평택시 고덕 국제화계획지구 내 Abc-33블록, 총 743세대 규모의 평택 고덕 우미린 프레스티지 정보를 확인하세요.",
     menu: "사업안내",
     image: "/img/og/business.jpg",
     priority: 0.9,
@@ -314,7 +294,7 @@ export const seoPages = {
     path: "/Promotion/Press",
     title: "언론보도 | 평택 고덕 우미린",
     description:
-      "평택 고덕 우미린 언론보도 페이지입니다. 고덕국제신도시 Abc-36블록 공급 정보, 청약, 입지환경, 모델하우스 방문예약 관련 공식 보도자료와 분양 소식을 확인하세요.",
+      "평택 고덕 우미린 언론보도 페이지입니다. 고덕국제신도시 Abc-33블록 공급 정보, 청약, 입지환경, 모델하우스 방문예약 관련 공식 보도자료와 분양 소식을 확인하세요.",
     menu: "홍보센터",
     image: "/img/og/main.jpg",
     priority: 0.9,
