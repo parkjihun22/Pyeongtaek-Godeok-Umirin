@@ -51,7 +51,7 @@ const locationSections = [
     img: section2Image5,
     titleText: "우미건설 브랜드가 만드는<br />프리미엄 주거 가치",
     contentText:
-      "차별화된 설계와 브랜드 노하우를 담은 주거공간<br />평택 고덕 우미린 프레스티지만의 품격 있는 라이프",
+      "차별화된 설계와 브랜드 노하우를 담은 주거공간<br />평택 고덕 우미린 더 프리미어만의 품격 있는 라이프",
   },
   {
     img: section2Image6,
@@ -114,7 +114,7 @@ const LocationEnvironment1 = () => {
       <div className={styles.textBox}>
   <div>삼성 평택캠퍼스와 함께 성장하는</div>
   <div>고덕국제신도시 프리미엄 라이프</div>
-  <div>평택 고덕 우미린 프레스티지가 새로운 주거 가치를 완성합니다.</div>
+  <div>평택 고덕 우미린 더 프리미어가 새로운 주거 가치를 완성합니다.</div>
 </div>
       <figure className={styles.locationMapFrame}>
         <img

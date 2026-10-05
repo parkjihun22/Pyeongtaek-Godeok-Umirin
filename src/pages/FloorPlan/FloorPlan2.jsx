@@ -43,7 +43,7 @@ const FloorPlan2 = () => {
       <MenuBar contents={menuContents} />
 
       <div className={styles.textBox}>
-        <div>평택 고덕 우미린 프레스티지 94 타입 안내</div>
+        <div>평택 고덕 우미린 더 프리미어 94 타입 안내</div>
         <div>실용적인 공간 활용과 생활 동선을 확인하세요.</div>
       </div>
 

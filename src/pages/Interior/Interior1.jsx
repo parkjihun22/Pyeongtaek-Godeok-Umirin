@@ -58,7 +58,7 @@ const Interior1 = () => {
       <MenuBar contents={menuContents} />
 
       <div className={styles.textBox}>
-      <div>평택 고덕 우미린 프레스티지의 새로운 주거 프리미엄</div>
+      <div>평택 고덕 우미린 더 프리미어의 새로운 주거 프리미엄</div>
       <div>평택 고덕 우미린를 만나보세요.</div>
       </div>
 

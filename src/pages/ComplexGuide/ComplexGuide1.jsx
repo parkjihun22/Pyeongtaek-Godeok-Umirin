@@ -54,7 +54,7 @@ const ComplexGuide1 = () => {
 <MenuBar contents={menuContents} />
 <div className={styles.textBox}>
   <div>고덕국제신도시의 미래가치를 담은 프리미엄 라이프</div>
-  <div>평택 고덕 우미린 프레스티지, 743세대 브랜드 주거단지를 완성합니다.</div>
+  <div>평택 고덕 우미린 더 프리미어, 743세대 브랜드 주거단지를 완성합니다.</div>
 </div>
 
 <img

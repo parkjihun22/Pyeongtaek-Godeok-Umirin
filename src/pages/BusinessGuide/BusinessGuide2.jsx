@@ -53,7 +53,7 @@ const BusinessGuide2 = () => {
 <Bener title="분양일정" />
 <MenuBar contents={menuContents} />
 <div className={styles.textBox}>
-  <div>평택 고덕 우미린 프레스티지의 주요 분양 일정</div>
+  <div>평택 고덕 우미린 더 프리미어의 주요 분양 일정</div>
   <div>청약, 당첨자 발표, 계약 등 필요한 일정을 확인하세요.</div>
 </div>
 

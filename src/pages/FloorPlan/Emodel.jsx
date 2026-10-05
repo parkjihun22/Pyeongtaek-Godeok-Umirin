@@ -42,7 +42,7 @@ const Emodel = () => {
       <MenuBar contents={menuContents} />
 
       <div className={styles.textBox}>
-        <div>평택 고덕 우미린 프레스티지 타입별 공간을 온라인으로 확인</div>
+        <div>평택 고덕 우미린 더 프리미어 타입별 공간을 온라인으로 확인</div>
         <div>59㎡·75㎡·84㎡ 타입의 구조와 생활 동선을 살펴보세요.</div>
       </div>
 

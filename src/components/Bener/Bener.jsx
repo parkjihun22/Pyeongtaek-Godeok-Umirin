@@ -90,7 +90,7 @@ const contents = (text, isLoaded) => {
     return (
       <>
         <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>
-          평택 고덕 우미린 프레스티지가 선보이는 새로운 프리미엄 라이프를 만나보세요.
+          평택 고덕 우미린 더 프리미어가 선보이는 새로운 프리미엄 라이프를 만나보세요.
         </div>
 
         <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>
@@ -98,7 +98,7 @@ const contents = (text, isLoaded) => {
         </div>
 
         <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>
-          평택 고덕 우미린 프레스티지의 사업안내부터 공급정보까지 한눈에 확인하세요.
+          평택 고덕 우미린 더 프리미어의 사업안내부터 공급정보까지 한눈에 확인하세요.
         </div>
       </>
     );
@@ -110,7 +110,7 @@ const contents = (text, isLoaded) => {
     return (
       <>
         <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>
-          평택 고덕 우미린 프레스티지의 사업개요와 분양 정보를 안내합니다.
+          평택 고덕 우미린 더 프리미어의 사업개요와 분양 정보를 안내합니다.
         </div>
 
         <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>
@@ -130,7 +130,7 @@ const contents = (text, isLoaded) => {
     return (
       <>
         <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>
-          평택 고덕 우미린 프레스티지의 입지환경과 고덕국제신도시 생활 인프라를 확인해 보세요.
+          평택 고덕 우미린 더 프리미어의 입지환경과 고덕국제신도시 생활 인프라를 확인해 보세요.
         </div>
 
         <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>
@@ -142,7 +142,7 @@ const contents = (text, isLoaded) => {
     return (
       <>
         <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>
-          총 743세대 규모의 쾌적한 단지 설계와 커뮤니티 공간을 갖춘 평택 고덕 우미린 프레스티지.
+          총 743세대 규모의 쾌적한 단지 설계와 커뮤니티 공간을 갖춘 평택 고덕 우미린 더 프리미어.
         </div>
 
         <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>

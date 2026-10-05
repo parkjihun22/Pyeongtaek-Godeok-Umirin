@@ -55,7 +55,7 @@ const Brand1 = () => {
 <MenuBar contents={menuContents} />
 <div className={`${styles.textBox} ${isTextVisible ? styles.active : ""}`}>
   <div>고덕국제신도시의 생활과 미래가치를 가까이</div>
-  <div>평택 고덕 우미린 프레스티지, 우미건설의 새로운 주거 가치</div>
+  <div>평택 고덕 우미린 더 프리미어, 우미건설의 새로운 주거 가치</div>
 </div>
 
 <img

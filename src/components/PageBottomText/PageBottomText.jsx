@@ -4,9 +4,9 @@ import styles from "./PageBottomText.module.scss";
 const PageBottomText = () => {
     return (
         <div className={styles.container}>
-            <div className={styles.title}>평택 고덕 우미린 프레스티지 모델하우스</div>
+            <div className={styles.title}>평택 고덕 우미린 더 프리미어 모델하우스</div>
 
-            <div>평택 고덕 우미린 프레스티지 모델하우스는</div>
+            <div>평택 고덕 우미린 더 프리미어 모델하우스는</div>
             <div>상담사들의 허위 과장된 설명으로 인한</div>
             <div>고객님들의 피해방지 및 추후 문제 발생 시</div>
             <div>책임소재를 분명히 하기 위해</div>

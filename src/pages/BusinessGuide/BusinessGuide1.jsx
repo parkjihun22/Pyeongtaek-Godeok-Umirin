@@ -15,12 +15,12 @@ import tableImage from "../../assets/BusinessGuide/BusinessGuide1/tableImage.jpg
 const projectData = [
   {
     label: "현장명",
-    value: "평택 고덕 우미린 프레스티지",
+    value: "평택 고덕 우미린 더 프리미어",
   },
 
   {
     label: "사업명",
-    value: "평택 고덕 우미린 프레스티지",
+    value: "평택 고덕 우미린 더 프리미어",
   },
 
   {
@@ -88,7 +88,7 @@ const BusinessGuide1 = () => {
 <MenuBar contents={menuContents} />
 <div className={styles.textBox}>
   <div>고덕국제신도시의 미래가치를 담은 프리미엄 주거단지</div>
-  <div>평택 고덕 우미린 프레스티지, 우미건설의 새로운 주거 가치</div>
+  <div>평택 고덕 우미린 더 프리미어, 우미건설의 새로운 주거 가치</div>
 </div>
 
 <img className={styles.img3} src={page1} alt="평택 고덕 우미린 사업개요 이미지"/>

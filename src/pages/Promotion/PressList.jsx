@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/Footer";
 const samplePress = [
   {
     id: 1,
-    title: "평택 고덕 우미린 프레스티지 분양 안내",
+    title: "평택 고덕 우미린 더 프리미어 분양 안내",
     date: "2024.07.21",
     summary: "청주 지북동 949세대 분양 정보와 모델하우스 방문예약 안내.",
     image: "/img/sample1.jpg",

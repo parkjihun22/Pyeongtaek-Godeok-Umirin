@@ -45,7 +45,7 @@ const LocationEnvironment2 = () => {
       <div className={styles.textBox}>
         <div>고덕국제신도시의 중심에서</div>
         <div>삼성 평택캠퍼스와 함께 누리는 프리미엄 라이프</div>
-        <div>평택 고덕 우미린 프레스티지가 새로운 주거 기준을 제안합니다.</div>
+        <div>평택 고덕 우미린 더 프리미어가 새로운 주거 기준을 제안합니다.</div>
       </div>
 
       <figure className={styles.locationMapFrame}>

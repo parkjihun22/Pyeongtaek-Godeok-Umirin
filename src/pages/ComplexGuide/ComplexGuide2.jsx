@@ -54,7 +54,7 @@ const ComplexGuide1 = () => {
 <Bener title="호수 배치도" />
 <MenuBar contents={menuContents} />
 <div className={styles.textBox}>
-  <div>평택 고덕 우미린 프레스티지의 프리미엄 주거 설계</div>
+  <div>평택 고덕 우미린 더 프리미어의 프리미엄 주거 설계</div>
   <div>평택 고덕 우미린 동·호수 배치를 확인하세요.</div>
 </div>
 
